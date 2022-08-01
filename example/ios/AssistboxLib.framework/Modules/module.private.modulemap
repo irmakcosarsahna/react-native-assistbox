@@ -1,0 +1,18 @@
+framework module AssistboxLib_Private {
+	
+	header "ASTPlugin.h"
+	header "ASTWebViewEngineProtocol.h"
+	header "ASTCommandDelegate.h"
+	header "ASTPluginResult.h"
+	header "ASTAvailability.h"
+	header "ASTAvailabilityDeprecated.h"
+	header "NSMutableArray+QueueAdditions.h"
+	header "ASTInvokedUrlCommand.h"
+	header "AssistboxRTCMTLVideoView.h"
+	header "AssistboxRTCEAGLVideoView.h"
+	header "ASTViewController.h"
+	header "ASTCommandQueue.h"
+	header "ASTScreenOrientationDelegate.h"
+	
+	export AssistboxLib_Private
+}

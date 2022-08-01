@@ -1,0 +1,75 @@
+<link href="css/client.css" rel="stylesheet" type="text/css" />
+<link href="css/loading.css" rel="stylesheet" type="text/css" />
+<ion-view id="client" cache-view="false">
+	<div id="container" class="clientContainer" style="height:100%;">
+		<div class="w-90" id="videoDiv">
+			<ion-content class="clientContent" id="clientIonContent" />
+		</div>
+		<div class="icons icons-open wrap w-10" id="buttonsDiv">
+			<ul class="icons-ul" ng-if="hiddenComponentsChecked">
+				<li check-to-hide id="toggle-microphone-btn" class="full" ng-click="toggleMicrophone()">
+					<img ng-src="{{audioStatus == false && 'img/no-microphone.png' || 'img/microphone.png' }}" />
+				</li>
+
+				<li check-to-hide id="toggle-camera-btn" class="full" ng-click="toggleCamera()">
+					<img ng-src="{{videoStatus == false && 'img/no-camera.png' || 'img/camera.png' }}" />
+				</li>
+
+				<li check-to-hide id="chat-btn" class="full" ng-click="openChatModal()">
+					<img src="img/chaticon.png" />
+					<span style="position:fixed;">
+						<span id="message-count" ng-hide="newMessageCount == 0"
+							ng-class="{'numberCircle' : newMessageCount != 0, '':newMessageCount == 0}">
+							{{ newMessageCount }}
+						</span>
+					</span>
+				</li>
+
+				<li check-to-hide id="switch-camera-btn" class="full cameraChange"
+					ng-click="changeCameraDirection($event)">
+					<img src="img/switch-camera.png" />
+				</li>
+
+				<li class="full" check-to-hide id="end-call-btn" ng-click="stopMeeting()">
+					<img src="img/call-end-icon.png" />
+				</li>
+			</ul>
+			</ul>
+		</div>
+	</div>
+	<div class="popup-container" id="incomingCallModal" style="visibility: hidden;">
+		<div class="popup">
+			<div class="popup-body">
+				<div class="meeting-modal">
+					<div class="modal-header">
+						<span ng-bind-html="'ASSISTBOX_COMING_CALL_INFO' | translate"></span>
+					</div>
+					<div class="modal-body request-join-body">
+						<div class="friend">
+							<div class="row">
+								<div class="circle">
+									<div class="circle-main">
+										<span class="initials">{{caller.firstChar}}</span>
+									</div>
+								</div>
+								<div class="friend-name">
+									<p>
+										<span>{{caller.fullName}}</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer model-request-join-footer">
+						<a style="float: right" class="button btn-transparent"
+							ng-click="answerIncomingCall(true)">{{'ASSISTBOX_ACCEPT'
+							| translate}}</a>
+						<a style="float: left" class="button btn-transparent"
+							ng-click="answerIncomingCall(false)">{{'ASSISTBOX_REJECT'
+							| translate}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-view>

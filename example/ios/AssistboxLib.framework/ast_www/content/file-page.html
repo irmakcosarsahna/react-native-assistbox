@@ -1,0 +1,14 @@
+<link href="css/file-page.css" rel="stylesheet" type="text/css" />
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+	<!-- Dashboard Tab -->
+	<ion-tab ui-sref="filePage.incoming" title="{{'ASSISTBOX_INCOMING_FILES' | translate}}" icon-off="ion-ios-cloud-download-outline" icon-on="ion-ios-cloud-download" ng-click="showIncomingFiles()">
+		<ion-nav-view name="tab-incoming-file"></ion-nav-view>
+	</ion-tab>
+
+	<!-- Account Tab -->
+	<ion-tab ui-sref="filePage.outgoing" title="{{'ASSISTBOX_OUTGOING_FILES' | translate}}" icon-off="ion-ios-cloud-upload-outline" icon-on="ion-ios-cloud-upload" ng-click="showOutgoingFiles()">
+		<ion-nav-view name="tab-outgoing-file"></ion-nav-view>
+	</ion-tab>
+
+</ion-tabs>

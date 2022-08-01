@@ -1,0 +1,78 @@
+<ion-view id="login" cache-view="false">
+	<ion-content padding="true" keyboard-resize class="scroll-content ionic-scroll overflow-scroll">
+		<div id="login-padding" class="scroll padding">
+			<div class="login-spacer spacer ic-selected" style="width: 300px;"></div>
+			<div class="ic-selected">
+				<img class="login-img login-img-logo-text" src="img/Assistbox-Logo-2-Alternatif.png">
+			</div>
+			<div class="login-spacer spacer ic-selected" style="width: 300px;"></div>
+			<div id="login-form" class="list user-form">
+				<div class="item item-input item-input-custom" id="page-input1">
+					<span class="input-label input-label-custom" aria-label="Email" id="_label-22">{{"ASSISTBOX_EMAIL" |
+						translate}}</span>
+					<input type="text" placeholder="" ng-model="user.username">
+					<span class="input-label input-label-custom btn-show-pass"></span>
+				</div>
+				<div class="spacer" style="height: 10px; width: 300px;"></div>
+				<div class="item item-input item-input-custom" id="page-input2">
+					<span class="input-label input-label-custom" aria-label="Password"
+						id="_label-23">{{"ASSISTBOX_PASSWORD" | translate}}</span>
+					<input type="password" placeholder="" ng-model="user.password"></input>
+					<span class="input-label input-label-custom btn-show-pass" show-password="0"
+						ng-click="showOrHidePassword($event)" id="_label-24"><i class="icon ion-eye"></i></span>
+				</div>
+				</form>
+				<div id="login-btn">
+					<button id="page-button1" ng-click="login()" class="button button-block btn-blue"
+						data-componentid="button1" data-tap-disabled="true">{{"ASSISTBOX_LOGIN" | translate}}
+					</button>
+				</div>
+
+				<div class="text" style="text-align: center;">
+					<span ng-bind-html="gdprUrlMsg" ng-click="openInAppBrowser()"
+						style="font-size: 12px;opacity: 0.6;"></span>
+				</div>
+			</div>
+	</ion-content>
+	</ion-pane>
+	<script id="changePassword.html" type="text/ng-template">
+		<div class="modal" style="height:100%;width:100%;">
+			<ion-header-bar class="bar-stable white-header-bar">
+				<div class="buttons" style="top:12px;">
+					<i class="header-event-text header-event-text-left" ng-click="closeChangePassModal()">
+						<i class="ion-ios-arrow-back" style="margin-right: 8px;font-size: 20px;"></i>{{'ASSISTBOX_BACK'
+						|translate}}</i>
+				</div>
+				<h1 class="title">{{'ASSISTBOX_CHANGE_PASSWORD' | translate}}</h1>
+			</ion-header-bar>
+			<ion-content has-header="true" padding="true" scroll="false">
+				<div class="scroll padding">
+					<div class="spacer ic-selected" data-componentid="spacer3" style="width: 300px;height: 20px;"
+						 data-tap-disabled="true"></div>
+					<p style="color: #a5a5a5;">
+						{{'ASSISTBOX_CHANGE_EXPIRED_PASSWORD_MESSAGE' | translate}}
+					</p>
+					<div class="spacer ic-selected" style="width: 300px; height: 20px;" data-tap-disabled="true"></div>
+					<form class="list user-form" data-tap-disabled="true">
+						<div class="item item-input item-input-custom" id="page-input2">
+							<span class="input-label input-label-custom" aria-label="Password">{{"ASSISTBOX_PASSWORD" | translate}}</span>
+							<input type="password" placeholder="" ng-model="userChangePassword.password">
+							<span class="input-label input-label-custom btn-show-pass" show-password="0" ng-click="showOrHidePassword($event)"><i class="icon ion-eye"></i></span>
+						</div>
+						<div class="spacer" style="height: 10px; width: 300px;"></div>
+						<div class="item item-input item-input-custom" id="page-input2">
+							<span class="input-label input-label-custom" aria-label="Password">{{"ASSISTBOX_CONFIRM_PASSWORD" | translate}}</span>
+							<input type="password" placeholder="" ng-model="userChangePassword.confirmPassword">
+							<span class="input-label input-label-custom btn-show-pass" show-password="0" ng-click="showOrHidePassword($event)"><i class="icon ion-eye"></i></span>
+						</div>
+					</form>
+					<div id="change-password-btn">
+						<button id="page-button1" ng-click="changePassword()" class="button button-block btn-blue"
+							data-componentid="button1" data-tap-disabled="true">{{"ASSISTBOX_UPDATE" | translate}}
+						</button>
+					</div>
+				</div>
+			</ion-content>
+		</div>
+	</script>
+</ion-view>

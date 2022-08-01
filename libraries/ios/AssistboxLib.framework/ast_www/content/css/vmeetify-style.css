@@ -1,0 +1,293 @@
+body {
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI",
+    sans-serif !important;
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+.button-blue {
+  color: #fff;
+  background: #37a7ff;
+  border-radius: 7px;
+  text-transform: capitalize !important;
+  border-radius: 7px !important;
+}
+.button-blue:hover {
+  background: rgba(0, 145, 234, 0.68);
+  color: #fff;
+}
+.button-blue:active {
+  background: rgba(0, 145, 234, 0.68);
+  color: #fff;
+}
+.startMeetingForm {
+  background: #ffffff !important;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.white-header-bar {
+  background-color: #ffffff !important;
+  background-image: linear-gradient(
+    to top,
+    #b2b2b2,
+    #f8f8f8,
+    transparent 78.99%
+  ) !important;
+  color: #000 !important;
+}
+.white-header-bar .headerEventText {
+  color: #0091ea;
+  text-align: center;
+  line-height: 35px;
+}
+.fuchsia-header-bar {
+  /*background: rgb(77, 35, 56) !important;*/
+  background: #c23843 !important;
+  color: #fff !important;
+}
+.fuchsia-header-bar .title {
+  color: #fff !important;
+}
+.bar-stable.fuchsia-header-bar .button.button-clear {
+  color: #fff !important;
+}
+.list.start-meeting-item .item {
+  border: 1px solid #e9e9e9 !important;
+}
+
+.button-square-large {
+  padding: 9%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-align: center;
+  box-shadow: 2px 0px 7px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 2px 7px 0 rgba(0, 0, 0, 0.26);
+  margin: 2%;
+}
+
+.icon-button-square-inside {
+  font-size: 25px !important;
+}
+.button-square-large i {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI",
+    sans-serif;
+  line-height: 1.2;
+  font-size: 16px;
+}
+.bottom-items {
+  left: 0px;
+  right: 0px;
+  position: fixed;
+}
+.vmeetify-tabs .tabs {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background-image: none;
+}
+.tabs .tab-item {
+  color: rgba(16, 44, 62, 0.64);
+}
+.vmeetify-tabs .tabs .tab-item-active {
+  opacity: 1;
+  color: #c23843;
+}
+.button-square-large:focus {
+  opacity: 0.5;
+}
+.button-square-large:hover {
+  opacity: 0.5;
+}
+.button-square-large:active {
+  opacity: 0.5;
+}
+
+.alpha_sidebar {
+  position: absolute;
+  top: 20%;
+  right: 0.5%;
+  z-index: 100000;
+}
+.alpha_sidebar li {
+  color: #2e7dd1;
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI",
+    sans-serif;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.contactname-item {
+  padding: 8px 0px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI",
+    sans-serif;
+  margin-left: 15px;
+  margin-right: 25px;
+  color: #000;
+  width: 92% !important;
+  background: transparent;
+  border-color: #d8d8d8;
+}
+.letter-item {
+  background-color: #ececec !important;
+  height: 30px !important;
+  line-height: 15px !important;
+  color: #000 !important;
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI",
+    sans-serif;
+  padding-right: 0px;
+}
+
+.contactname-item:focus {
+  background-color: #ececec !important;
+}
+.contactname-item:hover {
+  background-color: #ececec !important;
+}
+.contactname-item:active {
+  background-color: #ececec !important;
+}
+
+.popup-container .popup {
+  width: 80%;
+}
+.button {
+  text-transform: capitalize !important;
+}
+
+.center {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.system-notification.icon {
+  background-color: #37bded;
+  border: 4px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+}
+.system-notification.icon .notification-number {
+  position: absolute;
+  right: -8px;
+  top: -4px;
+  z-index: 1;
+  background: #d62d2b;
+  border-radius: 50%;
+  padding-top: 5px;
+  height: 20px;
+  width: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 8px;
+  color: #fff;
+}
+.notification-text-header {
+  display: block;
+  font-weight: 500;
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI",
+    sans-serif !important;
+  font-size: 15px;
+}
+
+.notification-text {
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI",
+    sans-serif !important;
+  color: #9f9f9f;
+  display: block;
+}
+.system-notification-row {
+  padding-top: 5% !important;
+}
+.system-notification-row:focus {
+  background-color: #ececec !important;
+}
+.system-notification-row:hover {
+  background-color: #ececec !important;
+}
+
+.circle-button {
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid #c5c5c5;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding-top: 1%;
+  text-align: center;
+  font-size: 1em;
+  color: #c5c5c5;
+}
+.circle-button.accept-button {
+  color: #37a7ff;
+  border: 1px solid #37a7ff;
+}
+.contact-request-status {
+  white-space: nowrap;
+  padding: 6% 0;
+  font-weight: 500;
+  color: #8f8f8f;
+}
+.container-chat {
+  height: 100vh;
+  position: relative;
+}
+.main-content {
+  background-color: rgba(40, 43, 50, 1);
+}
+.main-content-header {
+  text-align: center;
+  font-size: 55px;
+  font-weight: 400;
+  color: rgb(248, 241, 241);
+  margin-top: 5%;
+}
+
+.main-content-header-span {
+  margin: 2% auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+.main-logo-text {
+  display: block;
+  width: 30%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1 !important;
+  z-index: 999;
+}
+
+.main-logo {
+  display: block;
+  width: 15%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1 !important;
+  z-index: 999;
+}
+
+.main-bottom-span {
+  text-align: center;
+  font-size: 20px;
+  padding: 5%;
+}
+
+.main-content-header .main-logo {
+  width: 50%;
+}

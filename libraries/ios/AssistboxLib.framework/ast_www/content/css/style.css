@@ -1,0 +1,254 @@
+body {
+	font-family: "Roboto", sans-serif !important;
+	padding-top: constant(safe-area-inset-top);
+	padding-top: env(safe-area-inset-top);
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: "Roboto", sans-serif !important;
+}
+
+a, i, p, span, label {
+	font-family: "Roboto", sans-serif !important;
+}
+
+.platform-android .bar .title {
+	font-size: 17px;
+}
+
+.light-white-content {
+	background: #f1f5f794;
+}
+
+.white-header-bar {
+	background-color: #ffffff !important;
+	background-image: linear-gradient( to top, #b2b2b2, #f8f8f8, transparent 78.99%) !important;
+	color: #000 !important;
+}
+
+.white-header-bar .header-event-text {
+	color: #37a7ff;
+	text-align: center;
+	line-height: 35px;
+}
+
+.popup-container .popup {
+	width: 80%;
+}
+
+.button {
+	text-transform: capitalize !important;
+}
+
+.item-input-custom {
+	background: #f4f8fc;
+	border: 0;
+	border-radius: 10px !important;
+}
+
+.input-label-custom {
+	color: #585858;
+	font-size: 13px;
+	width: 30%;
+}
+
+.btn-blue {
+	color: #fff;
+	background-color: #37a7ff;
+	border-radius: 10px;
+}
+
+.btn-blue:hover {
+	background-color: rgba(0, 145, 234, 0.68);
+	color: #fff;
+}
+
+.btn-blue:active {
+	background-color: rgba(0, 145, 234, 0.68);
+	color: #fff;
+}
+
+.btn-transparent {
+	border-color: #37a7ff;
+	background-color: transparent;
+	color: #37a7ff;
+	border: none;
+}
+
+.item .item-content.activated {
+	background-color: #FFFFFF;
+}
+
+input[disabled] {
+	background-color: transparent !important;
+}
+
+.bar.bar-stable {
+	border-color: transparent !important;
+}
+
+.header-event-text {
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 0;
+	overflow: hidden;
+	min-width: 25px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 17px;
+	font-weight: 400;
+	color: #37a7ff;
+}
+
+.header-event-text-left {
+	min-width: 70px;
+}
+
+.hidden {
+	display: none;
+}
+
+.ion-android-arrow-dropright:hover {
+	color: #000066;
+}
+
+.container {
+	height: 100vh;
+	background: #eee;
+	position: relative;
+}
+
+.platform-android .chatMsg {
+	height: 78%;
+}
+
+.platform-ios .chatMsg {
+	height: 83%;
+}
+
+.platform-android .chatMsg {
+	padding-top: 5px;
+}
+
+.displayNone {
+	display: none;
+}
+
+.displayBlock {
+	display: block;
+}
+
+.popover {
+	height: auto !important;
+}
+
+.popover ion-header-bar {
+	position: relative;
+}
+
+.popover ion-content {
+	position: relative;
+}
+
+.platform-ios .popover-arrow {
+	right: 0px;
+}
+
+.popover {
+	border-radius: 10px;
+}
+
+.popover a.item:first-child {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.popover a.item:last-child {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.slide-in-right {
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.slide-in-right.ng-enter, .slide-in-right>.ng-enter {
+	-webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+	transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+
+.slide-in-right.ng-enter-active, .slide-in-right>.ng-enter-active {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.slide-in-right.ng-leave, .slide-in-right>.ng-leave {
+	-webkit-transition: all ease-in-out 250ms;
+	transition: all ease-in-out 250ms;
+}
+
+.login-img {
+	display: block;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.user-form.list .item.item-input input {
+	padding-right: 10px;
+}
+
+.user-form .icon {
+	font-size: 16px;
+}
+
+.btn-show-pass {
+	width: 20%;
+	margin-left: 10px;
+	text-align: center;
+	padding-right: 0px;
+}
+
+@media (orientation: landscape) {
+	#spacer {
+		height: 30px;
+	}
+	.login-spacer {
+		height: 20px;
+	}
+	.login-img-logo {
+		width: 10%;
+	}
+	.login-img-logo-text {
+		width: 30%;
+	}
+	#login-btn {
+		padding: 0px 20%;
+	}
+	#login-form {
+		padding: 0px 20%;
+		margin-top: 20px;
+	}
+	#login-padding {
+		padding-top: 0px;
+	}
+}
+
+@media (orientation: portrait) {
+	#spacer {
+		height: 198px;
+	}
+	.login-spacer {
+		height: 130px;
+	}
+	.login-img-logo {
+		width: 30%;
+	}
+	.login-img-logo-text {
+		width: 50%;
+	}
+}
+
+/*////// icons CSS end /////////////////////////*/

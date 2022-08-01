@@ -1,0 +1,63 @@
+<link href="css/client.css" rel="stylesheet" type="text/css" />
+<link href="css/loading.css" rel="stylesheet" type="text/css" />
+<ion-view id="c2cVideoCall" cache-view="false">
+
+	<div id="container" class="clientContainer" style="height:100%;">
+		<div class="w-90" id="videoDiv">
+			<ion-content class="clientContent" id="agentIonContent" />
+		</div>
+		<div class="icons icons-open wrap row" id="buttonsDiv">
+			<div id="iconsScroller">
+				<ul class="icons-ul" ng-if="hiddenComponentsChecked">
+					<li check-to-hide id="toggle-microphone-btn" class="full" ng-click="toggleMicrophone()">
+						<img ng-src="{{audioStatus == false && 'img/no-microphone.png' || 'img/microphone.png' }}" />
+					</li>
+
+					<li check-to-hide id="toggle-camera-btn" class="full" ng-click="toggleCamera()">
+						<img ng-src="{{videoStatus == false && 'img/no-camera.png' || 'img/camera.png' }}" />
+					</li>
+
+					<!--<li class="full" ng-click="openInAppBrowser()">
+				<img src="img/button-browser.png" />
+				</li>-->
+
+					<li check-to-hide id="contact-form-btn" class="full textView" ng-click="triggerContactForm()">
+						<img src="img/button-form.png" />
+					</li>
+
+					<li check-to-hide id="text-view-btn" class="full textView" ng-click="showOrHideTextView()">
+						<img src="img/button-info-1.png" />
+					</li>
+
+					<li check-to-hide id="chat-btn" class="full chat" ng-click="openChatModal()">
+						<img src="img/chaticon.png" />
+						<span class="assistbox-chat-notification-icon">
+							<span id="message-count" ng-hide="newMessageCount == 0"
+								ng-class="{'numberCircle' : newMessageCount != 0, '':newMessageCount == 0}"
+								ng-bind-html="newMessageCount">
+							</span>
+						</span>
+					</li>
+					<li check-to-hide id="switch-camera-btn" class="full cameraChange"
+						ng-click="changeCameraDirection()">
+						<img src="img/switch-camera.png" />
+					</li>
+					<li check-to-hide id="forward-queue-btn" class="full" ng-click="openForwardQueueModal()">
+						<img src="img/button-forward-queue.png" />
+					</li>
+					<li check-to-hide id="end-call-btn" class="full" ng-click="stopMeeting(true)">
+						<img src="img/call-end-icon.png" />
+					</li>
+				</ul>
+			</div>
+			<div class="paddles">
+				<button class="left-paddle paddle" id="left-button" ng-click="leftPaddle()">
+					<span class="ion-arrow-left-b"></span>
+				</button>
+				<button class="right-paddle paddle" id="right-button" ng-click="rightPaddle()">
+					<span class="ion-arrow-right-b"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</ion-view>

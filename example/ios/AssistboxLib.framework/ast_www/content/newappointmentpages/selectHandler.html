@@ -1,0 +1,27 @@
+<link href="css/appointments.css" rel="stylesheet" type="text/css" />
+<ion-view id="selectHandler" cache-view="false">
+	<div class="modal" style="height:100%;width:100%;">
+
+		<ion-header-bar class="bar-stable white-header-bar">
+			<div class="buttons" style="top:12px;padding-left: 10px;">
+				<i class="headerEventText headerEventTextLeft" ng-click="closeMeetingResultModal)">
+					{{"ASSISTBOX_CLOSE" | translate}}</i>
+			</div>
+			<h1 class="title">{{"ASSISTBOX_HANDLERS" | translate}}</h1>
+		</ion-header-bar>
+
+		<ion-content class="greyContent" has-header="true" padding="false" scroll="false">
+			<ion-scroll class="handler-scroll" direction="y">
+
+				<div ng-repeat="handler in handlers">
+					<div class="handler-item" ng-click="handlerSelected(handler)">
+						<i class="handler-info">{{handler.fullname}}</i>
+						<i class="button button-calm select-button">{{"ASSISTBOX_SELECT" | translate}}</i>
+					</div>
+				</div>
+
+			</ion-scroll>
+		</ion-content>
+
+	</div>
+</ion-view>

@@ -1,0 +1,42 @@
+<link href="css/appointments.css" rel="stylesheet" type="text/css" />
+<ion-view id="selectTime" cache-view="false">
+
+	<ion-pane>
+
+		<ion-header-bar class="bar-stable white-header-bar">
+			<div class="buttons" style="top:12px;">
+				<i class="headerEventText headerEventTextLeft arrow-back ion-android-arrow-back"
+					ng-click="closeSelectTimeModal()"></i>
+			</div>
+			<h1 id="title" class="title">{{"ASSISTBOX_DATE" | translate}}</h1>
+		</ion-header-bar>
+
+		<ion-content class="greyContent" has-header="true" scroll="false">
+
+			<ion-scroll id="day-scroll" class="day-scroll" direction="x">
+				<div class="day-item" ng-repeat="day in days">
+					<div class="day-detail" ng-click="selectDay(day)">
+						<div class="day-name">
+							<i>{{day.dayName}}</i>
+						</div>
+
+						<div id="day-number{{day.value}}" class="day-number button">
+							<i>{{day.day}}</i>
+						</div>
+					</div>
+				</div>
+			</ion-scroll>
+			<ion-scroll class="time-scroll" direction="y">
+				<div ng-repeat="time in times">
+					<div class="time-item">
+						<i class="time-info">{{time.hour}} : {{time.minute}}</i>
+						<i ng-if="time.active" ng-click="createAppointment(time)"
+							class="button button-calm select-button">{{"ASSISTBOX_SELECT" | translate}}</i>
+					</div>
+				</div>
+			</ion-scroll>
+
+		</ion-content>
+	</ion-pane>
+
+</ion-view>

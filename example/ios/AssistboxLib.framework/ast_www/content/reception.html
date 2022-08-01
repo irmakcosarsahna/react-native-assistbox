@@ -1,0 +1,69 @@
+<link href="css/reception.css" rel="stylesheet" type="text/css" />
+<ion-view id="mainPage" cache-view="false">
+	<ion-content class="white-container" delegate-handle="mainScroll" overflow-scroll=“true”>
+		<div style="padding: 20px;">
+			<div class="spacer ic-selected" style="width: 300px; height: 59px;"></div>
+			<div><img src="img/Assistbox-Amblem.png" style="display:block;width:20%;height:auto;"></div>
+			<div class="spacer" style="width: 300px; height: 24px;">
+			</div>
+			<div>
+				<p style="font-weight: 300;font-size: 1.75rem;">{{'ASSISTBOX_RECEPTION_TEXT_1' | translate}}</p>
+				<p style="font-weight: 300;font-size: 1.75rem;">{{'ASSISTBOX_RECEPTION_TEXT_2' | translate}}</p>
+			</div>
+			<div class="spacer" style="width: 300px; height: 24px;">
+			</div>
+			<div class="row">
+				<div class="col col-50">
+					<div class="card" ng-click="goToVideoMeeting()">
+						<div class="title">
+							<i class="icon ion-ios-videocam"></i>
+						</div>
+						<div class="text">{{'ASSISTBOX_GO_TO_MEETING' | translate}}</div>
+					</div>
+				</div>
+				<div class="col col-50">
+					<div class="card" ng-click="goToFilePage()">
+						<div class="title">
+							<i class="icon ion-upload"></i>
+						</div>
+						<div class="text">{{'ASSISTBOX_UPLOAD_FROM_DEVICE' | translate}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-50">
+					<div class="card" ng-click="openChatModal()">
+						<div class="title">
+							<i class="icon ion-chatbubbles"></i>
+						</div>
+						<div class="text">{{'ASSISTBOX_CHAT' | translate}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text" style="padding: 0px 30px;font-weight: 400;font-size: 18px;">
+			{{'ASSISTBOX_HOW_DOES_IT_WORK' | translate}}</div>
+		<ion-scroll direction="x" class="scroll-card">
+			<div class="card" ng-if="isLangTr" data-tap-disabled="true">
+				<video poster="img/ionic.png" width="280" height="180" controls="controls" preload="metadata"
+					class="videoPlayer" playsinline>
+					<source src="https://vmeetify.blob.core.windows.net/assistbox/start_meeting_via_link.mp4"
+						type="video/mp4" />
+				</video>
+				<div class="text">{{'ASSISTBOX_START_MEETING_VIA_LINK' | translate}}</div>
+			</div>
+			<div class="card" ng-if="!isLangTr" data-tap-disabled="true">
+				<video poster="img/ionic.png" width="280" height="180" controls="controls" preload="metadata"
+					class="videoPlayer" playsinline>
+					<source src="https://vmeetify.blob.core.windows.net/assistbox/start_meeting_via_link.mp4"
+						type="video/mp4" />
+				</video>
+				<div class="text">{{'ASSISTBOX_START_MEETING_VIA_LINK' | translate}}</div>
+			</div>
+		</ion-scroll>
+		<div class="text" ng-if="showAssistBoxLegalMsg" style="text-align: center;">
+			<span ng-bind-html="gdprUrlMsg" ng-click="openGdpr()" style="font-size: 12px;opacity: 0.6;"></span>
+		</div>
+		</div>
+	</ion-content>
+</ion-view>

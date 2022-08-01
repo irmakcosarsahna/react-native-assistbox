@@ -1,0 +1,31 @@
+<link href="css/appointments.css" rel="stylesheet" type="text/css" />
+<ion-view id="myAppointments" cache-view="false">
+
+	<ion-header-bar class="bar-stable white-header-bar">
+		<h1 class="title" style="left: 0px !important;">{{"ASSISTBOX_MY_APPOINTMENTS" | translate}}</h1>
+	</ion-header-bar>
+
+	<ion-content class="greyContent" has-header="true" scroll="false">
+		<ion-scroll></ion-scroll>
+		<ion-scroll class="my-appointments-scroll" direction="y">
+
+			<div ng-repeat="appointment in myAppointments">
+				<div class="appointment-item">
+					<i class="appointment-date-info">{{appointment.appointmentDate | date:'dd-MM-yyyy HH:mm'}}</i>
+					<i class="handler-name-info">{{appointment.expertUser.fullName}}</i>
+					<i class="button button-calm select-appointment-button" ng-click="selectAppointment(appointment)">{{"ASSISTBOX_SELECT" | translate}}</i>
+				</div>
+			</div>
+
+		</ion-scroll>
+
+
+
+	</ion-content>
+
+	<div class="button button-calm new-appointment-button" ng-click="newAppointment()">
+		<i class="ion-android-add" style="font-size:30px; float: left;"></i>
+		<i style="font-size:14px; float: right;">{{"ASSISTBOX_NEW_APPOINTMENT" | translate}}</i>
+	</div>
+
+</ion-view>

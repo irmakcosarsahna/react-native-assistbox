@@ -1,0 +1,32 @@
+<link href="css/client.css" rel="stylesheet" type="text/css" />
+<link href="css/queue.css" rel="stylesheet" type="text/css" />
+<link href="css/loading.css" rel="stylesheet" type="text/css" />
+<div class="modal" style="height:100%;width:100%;">
+	<ion-header-bar class="bar-stable white-header-bar">
+		<div class="buttons" style="top:12px;padding-left: 10px;">
+			<i class="headerEventText headerEventTextLeft" ng-click="closeForwardQueueModal()">{{'ASSISTBOX_CLOSE' |
+                translate}}</i>
+		</div>
+		<h1 class="title">{{'ASSISTBOX_QUEUE_FORWARDING' | translate}}</h1>
+	</ion-header-bar>
+	<ion-content class="greyContent" has-header="true" padding="false" scroll="false">
+		<ion-scroll direction="y" style="height: 100%;">
+			<ion-list>
+				<div id="click-to-call-queue" class="queue queue-list queue-forward-list" ng-repeat="queue in queues">
+					<ion-item ng-click="forwardToQueue(queue)">
+						<div class="circle" style="text-align: center;">
+							<div class="circle-main" style="text-align: center;">
+								<span class="initials" style="text-align: center;">{{queue.clientLength}}</span>
+							</div>
+						</div>
+						<div class="queue-name">
+							<p>
+								<span>{{queue.queueName}}</span>
+							</p>
+						</div>
+					</ion-item>
+				</div>
+			</ion-list>
+		</ion-scroll>
+	</ion-content>
+</div>

@@ -1,0 +1,50 @@
+<ion-view id="tab-outgoing-file">
+	<ion-header-bar class="bar-stable white-header-bar" ng-click="goBack()">
+		<div class="buttons" style="top:12px;" >
+			<i class="headerEventText headerEventTextLeft">
+				<i class="ion-ios-arrow-back"></i> {{'ASSISTBOX_BACK' | translate}}</i>
+		</div>
+		<h1 class="title">{{'ASSISTBOX_OUTGOING_FILES' | translate}}</h1>
+	</ion-header-bar>
+	<ion-content scroll="false" padding="false">
+		<div class="container-chat">
+			<div class="right">
+				<ion-scroll direction="y" style="height: 100%; white-space: nowrap;">
+
+					<div class="chat active-chat">
+						<div ng-repeat="outgoingFile in outgoingFiles">
+							<div id="fileView{{outgoingFile.binaryFileId}}">
+								<div class="bubble message-bubble{{outgoingFile.binaryFileId}} you"
+									ng-click="downloadOrOpenFile({{outgoingFile.binaryFileId}})">
+									<div class="file-info{{outgoingFile.binaryFileId}}"
+										style="display:inline-block; margin:0px;width: 100%;">
+										<div class="file-name">
+											<span class="ion-document-text" style="margin-right: 5px;"></span>
+											{{outgoingFile.binaryFileDto.blobName}}
+										</div>
+									</div>
+									<div class="message-content-progressbar"></div>
+									<div style="font-size:16px !important;display:block;"
+										id="downloadFileDiv{{outgoingFile.binaryFileId}}">
+										<a href="">
+											<i style="float: right;font-size: 25px;color: #0091ea;" class="ion-ios-download-outline"></i>
+										</a>
+									</div>
+									<div style="font-size:16px !important;display:none; float:right"
+										id="loadingFileDiv{{outgoingFile.binaryFileId}}">
+										<ion-spinner name="bubbles"></ion-spinner>
+										<p id=progress{{outgoingFile.binaryFileId}}></p>
+									</div>
+									<span style="display:block;font-size: 10px;">{{outgoingFile.fromUser.fullName}}
+										<span>
+											{{outgoingFile.messageDateString}}</span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-scroll>
+				<img class="add-file-button" src="img/add.png" ng-click="openActionSheet()">
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

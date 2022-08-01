@@ -1,0 +1,151 @@
+#incomingCall {
+	height: 35%;
+	text-align: center;
+	background-color: rgba(44, 136, 125, 0.05);
+	padding: 10px 10px 10px 10px;
+}
+
+#incomingCallInfo {
+	color: black;
+	padding: 10px 10px 10px 10px;
+	font-size: 30px;
+	position: relative;
+	top: 15%;
+	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.15), 3px 3px 6px 0px rgba(0, 0, 0, 0.15);
+	border-radius: 7px;
+}
+
+#rejectCall {
+	background-color: rgb(226, 0, 0);
+	width: 40%;
+	position: absolute;
+	top: 20%;
+	height: 40px;
+	text-align: left;
+	left: 5%;
+	box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.2), 4px 4px 13px 0px rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+}
+
+#rejectCallImg {
+	height: 100%;
+	border-right: 1px solid white;
+}
+
+#rejectCallText {
+	color: white;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 9px;
+	height: 80%;
+	width: 72%;
+	text-align: center;
+}
+
+#answerCall {
+	background-color: rgb(0, 147, 72);
+	width: 40%;
+	position: absolute;
+	top: 20%;
+	height: 40px;
+	text-align: left;
+	right: 5%;
+	box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.2), 4px 4px 13px 0px rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+}
+
+#answerCallImg {
+	height: 100%;
+	border-right: 1px solid white;
+}
+
+#answerCallText {
+	color: white;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 9px;
+	height: 80%;
+	width: 72%;
+	text-align: center;
+}
+
+.availability-form {
+	bottom: 0px;
+	width: 100%;
+	position: fixed;
+}
+
+.circle {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 16px;
+}
+
+.circle-main {
+	background-color: #0091ea;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	float: left;
+}
+
+.initials {
+	font-size: 20px;
+	/* 50% of parent */
+	line-height: 2;
+	text-align: center;
+	position: relative;
+	text-transform: uppercase;
+	color: #fff;
+	top: calc(var(--avatar-size) / 5);
+	/* 25% of parent */
+}
+
+.queue-name {
+	display: inline-block;
+	padding-left: 10px;
+	line-height: 2.8;
+}
+
+.queue-name p span {
+	font-size: 1rem;
+	color: #6b6d74;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.queue-list.queue .circle {
+	border-left: 3px solid rgba(0, 121, 107, 0.05);
+	padding: 5px 15px;
+	margin-right: 0px;
+	float: right;
+}
+
+.queue-list .item {
+	padding: 0px;
+	border: none;
+	border-top: 1px solid #f1f1f194;
+}
+
+.queue-list {
+	border-top: 1px solid #737070;
+}
+
+.toggle-unavailable {
+	display: inline-block;
+}
+
+.toggle-available {
+	display: inline-block;
+	right: 16px;
+	position: absolute;
+}
+
+.item-toggle .toggle {
+	right: 40%;
+}
+
+.queue-forward-list .initials {
+	line-height: 1.2;
+}

@@ -1,0 +1,58 @@
+<ion-view id="signup" cache-view="false">
+
+	<ion-pane>
+
+		<ion-header-bar class="bar-stable white-header-bar">
+			<h1 class="title">{{"ASSISTBOX_SIGNUP" | translate}}</h1>
+		</ion-header-bar>
+
+		<ion-content class="greyContent">
+			<div style="margin: 5px auto;
+                        text-align: center;
+                        font-size: 30px;
+                        font-weight: bold;
+                        color: #4d4d4d;color: #7c7c7c;
+                        padding: 20px;
+                        padding-top: 20%;">
+				<!--<img src="img/logo.png"
+                         style="display: block; width: 30%; height: auto; margin-left: auto; margin-right: auto; opacity:1 !important; z-index:999;">-->
+				AssistBox
+			</div>
+			<div class="startMeetingForm">
+				<form class="list start-meeting-item">
+					<label class="item item-input mail">
+						<span class="input-label mailText ion-ios-email-outline">&nbsp;&nbsp;{{"ASSISTBOX_EMAIL" | translate}}</span>
+						<input type="text" placeholder="" ng-model="user.username">
+					</label>
+					<label class="item item-input password">
+						<span class="input-label passwordText ion-locked">&nbsp;&nbsp;{{"ASSISTBOX_PASSWORD" | translate}}</span>
+						<input type="password" placeholder="" ng-model="user.password">
+					</label>
+					<label class="item item-input confirmpassword">
+						<span class="input-label passwordText ion-locked">&nbsp;&nbsp;{{"ASSISTBOX_CONFIRM_PASSWORD" | translate}}</span>
+						<input type="password" placeholder="" ng-model="user.confirmpassword">
+					</label>
+					<label class="item item-input firstname">
+						<span class="input-label passwordText ion-person">&nbsp;&nbsp;{{"ASSISTBOX_FIRSTNAME" | translate}}</span>
+						<input type="text" placeholder="" ng-model="user.firstname">
+					</label>
+					<label class="item item-input lastname">
+						<span class="input-label passwordText ion-person">&nbsp;&nbsp;{{"ASSISTBOX_LASTNAME" | translate}}</span>
+						<input type="text" placeholder="" ng-model="user.lastname">
+					</label>
+				</form>
+			</div>
+
+			<div style="
+                        text-align: center;
+                        /* padding-top: 10%; */">
+				<button class="button button-blue" ng-click="signUp()" style="width: 50%;
+                            font-weight: 500;"><i>{{"ASSISTBOX_SIGNUP" | translate}}</i></button>
+			</div>
+
+			<a ng-click="goToLogin()"
+				class="button button-positive  button-block button-clear createAccount"
+				style="color: #37a7ff;">{{"ASSISTBOX_OR" | translate}} {{"ASSISTBOX_LOGIN" | translate}}</a>
+		</ion-content>
+	</ion-pane>
+</ion-view>

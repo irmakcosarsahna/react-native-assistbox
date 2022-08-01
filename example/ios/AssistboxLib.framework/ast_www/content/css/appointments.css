@@ -1,0 +1,129 @@
+.department-scroll {
+	height: 100%;
+	white-space: nowrap;
+}
+
+.department-item {
+	width: 100%;
+	padding: 10px 25px 0px 25px;
+	height: 70px;
+	background-color: #f8f8f8;
+	border: #e6e6e6 1px solid;
+	position: relative;
+}
+
+.department-item .button {
+	float: right;
+}
+
+.handler-scroll {
+	height: 100%;
+	white-space: nowrap;
+}
+
+.handler-item {
+	width: 100%;
+	padding: 10px 25px 0px 25px;
+	height: 70px;
+	background-color: #f8f8f8;
+	border: #e6e6e6 1px solid;
+	position: relative
+}
+
+.handler-item .button {
+	float: right;
+}
+
+.day-scroll {
+	height: 100px;
+	white-space: nowrap;
+}
+
+.day-item {
+	display: inline-block;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.day-item .day-name {
+	font-size: 14px;
+	width: 55px;
+	overflow: hidden;
+}
+
+.day-item .day-name i {}
+
+.day-item .day-number {
+	height: 30px;
+	font-size: 25px;
+	background-color: #f1f1f1;
+	padding-top: 5px;
+}
+
+.time-scroll {
+	height: 90%;
+	white-space: nowrap;
+	padding-bottom: 50px;
+}
+
+.time-scroll .time-item {
+	font-size: 20px;
+	height: 70px;
+	padding: 10px 25px 0px 25px;
+	border: #e6e6e6 1px solid;
+	background-color: #f8f8f8;
+	position: relative;
+}
+
+.time-info {
+	position: absolute;
+	top: 35%;
+}
+
+.arrow-back {
+	font-size: 27px;
+}
+
+.select-button {
+	float: right;
+}
+
+.day-detail .active {
+	background-color: #666 !important;
+	color: white !important;
+}
+
+.my-appointments-scroll {
+	width: 100%;
+	height: 100%;
+	white-space: nowrap;
+	padding-bottom: 30%;
+}
+
+.appointment-item {
+	width: 100%;
+	padding: 10px 25px 0px 25px;
+	height: 70px;
+	background-color: #f8f8f8;
+	border: #e6e6e6 1px solid;
+	position: relative;
+}
+
+.appointment-item .handler-name-info {
+	/* float: right; */
+}
+
+.new-appointment-button {
+	position: fixed;
+    width: 45%;
+	height: 40px;
+	overflow: hidden;
+    border-radius: 20px;
+    z-index: 101;
+    bottom: 10%;
+    right: 5%;
+}
+
+.select-appointment-button{
+	float: right;
+}

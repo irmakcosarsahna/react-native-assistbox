@@ -1,0 +1,40 @@
+<link href="css/client.css" rel="stylesheet" type="text/css" />
+<link href="css/loading.css" rel="stylesheet" type="text/css" />
+<ion-view id="c2cClient" cache-view="false">
+	<div id="container" class="clientContainer" style="height:100%;">
+		<div class="w-90" id="videoDiv">
+			<ion-content class="clientContent" id="clientIonContent" />
+		</div>
+		<div class="icons icons-open wrap w-10" id="buttonsDiv">
+			<ul class="icons-ul" ng-if="hiddenComponentsChecked">
+				<li check-to-hide id="toggle-microphone-btn" class="full" ng-click="toggleMicrophone()">
+					<img ng-src="{{audioStatus == false && 'img/no-microphone.png' || 'img/microphone.png' }}" />
+				</li>
+
+				<li check-to-hide id="toggle-camera-btn" class="full" ng-click="toggleCamera()">
+					<img ng-src="{{videoStatus == false && 'img/no-camera.png' || 'img/camera.png' }}" />
+				</li>
+
+				<li check-to-hide id="chat-btn" class="full" ng-click="openChatModal()" style="display:none">
+					<img src="img/chaticon.png" />
+					<span style="position:fixed;">
+						<span id="message-count" ng-hide="newMessageCount == 0"
+							ng-class="{'numberCircle' : newMessageCount != 0, '':newMessageCount == 0}">
+							{{ newMessageCount }}
+						</span>
+					</span>
+				</li>
+
+				<li check-to-hide id="switch-camera-btn" class="full cameraChange"
+					ng-click="changeCameraDirection($event)">
+					<img src="img/switch-camera.png" />
+				</li>
+
+				<li class="full" check-to-hide id="end-call-btn" ng-click="stopMeeting(true)">
+					<img src="img/call-end-icon.png" />
+				</li>
+			</ul>
+			</ul>
+		</div>
+	</div>
+</ion-view>

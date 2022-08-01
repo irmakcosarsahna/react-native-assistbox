@@ -1,0 +1,39 @@
+.rating-star {
+	color: lightgrey;
+}
+
+.star-checked {
+	color: orange;
+}
+
+.item {
+	text-overflow: ellipsis;
+	white-space: normal;
+	padding: 10px;
+}
+
+.input-label {
+	width: 100%;
+	max-width: max-content;
+}
+
+label.item {
+	padding-bottom: 0px;
+	border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important;
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius: 00px !important;
+}
+
+div.item {
+	padding-top: 0px;
+	border-bottom-left-radius: 10px !important;
+	border-bottom-right-radius: 10px !important;
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+.headerEventTextLeft {
+	font-size: 25px;
+	padding-left: 5px;
+}

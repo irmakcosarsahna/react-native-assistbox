@@ -1,0 +1,9 @@
+framework module AssistboxLib {
+	
+	export *
+}
+
+module AssistboxLib.Swift {
+    header "AssistboxLib-Swift.h"
+    requires objc
+}

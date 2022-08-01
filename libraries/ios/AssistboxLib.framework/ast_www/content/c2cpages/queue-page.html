@@ -1,0 +1,102 @@
+<link href="css/queue.css" rel="stylesheet" type="text/css" />
+<link href="css/loading.css" rel="stylesheet" type="text/css" />
+<ion-view id="queuePage" cache-view="false">
+	<ion-header-bar class="bar-stable white-header-bar">
+		<div class="buttons" style="top:12px;">
+			<i ng-if="isQueueSelected" class="headerEventText headerEventTextLeft" style="z-index: 10;"
+				ng-click="goBack()">{{'ASSISTBOX_CLOSE' |
+				translate}}</i>
+			<i ng-if="!isQueueSelected" class="headerEventText headerEventTextLeft" style="z-index: 10;"
+				ng-click="goBack()">{{'ASSISTBOX_LOG_OUT' |
+				translate}}</i>
+
+		</div>
+		<h1 ng-if="!isQueueSelected" class="title">{{'ASSISTBOX_QUEUES' | translate}}</h1>
+		<h1 ng-if="isQueueSelected" class="title">{{'ASSISTBOX_WAITING_CLIENTS' | translate}}</h1>
+	</ion-header-bar>
+	<ion-content class="greyContent" has-header="true" padding="false" scroll="false">
+
+		<div id="incomingCall">
+			<div ng-if="incomingCallQueueId != undefined && incomingCallQueueId != 0"
+				style="width: 100%; height: 100%;">
+				<span id="incomingCallInfo">{{incomingCallQueue.queueName}}</span>
+
+				<div id="rejectCall" ng-click="rejectIncomingCall()">
+					<img id="rejectCallImg" src="img/call-end-icon.png">
+					<span id="rejectCallText">{{'ASSISTBOX_REJECT' | translate}}</span>
+				</div>
+
+				<div id="answerCall" on-touch="selectQueue(incomingCallQueue, 'fromQueuePage')">
+					<img id="answerCallImg" src="img/start-call.png" />
+					<span id="answerCallText">{{'ASSISTBOX_ANSWER' | translate}}</span>
+				</div>
+
+			</div>
+			<div ng-if="incomingCallQueueId == 0" style="margin: 5px auto;
+                            text-align: center;
+                            font-size: 30px;
+                            font-weight: bold;
+                            color: white;
+							padding: 0 20px 20px;
+							height: 100%;">
+				<img src="img/Assistbox-Logo.png"
+					style="display: block; max-width: 100%; max-height: 100%; margin-left: auto; margin-right: auto; opacity:1 !important; z-index:999; position: relative; top: 50%; transform: translateY(-50%);">
+
+			</div>
+		</div>
+		<ion-scroll direction="y" style="height: 55%;">
+			<ion-list ng-if="!isQueueSelected">
+				<div id="click-to-call-queue" class="queue queue-list" ng-repeat="queue in queues">
+					<ion-item ng-click="queue.clientLength > 0 ? selectQueue(queue, false) : null">
+						<div class="circle">
+							<div class="circle-main">
+								<span class="initials">{{queue.clientLength}}</span>
+							</div>
+						</div>
+						<div class="queue-name">
+							<p>
+								<span>{{queue.queueName}}</span>
+							</p>
+						</div>
+					</ion-item>
+				</div>
+			</ion-list>
+
+			<!-- <ion-list ng-if="isQueueSelected">
+                <div id="queue_clients" ng-repeat="client in clientsOfSelectedQueue">
+                    <ion-item ng-click="occupyClient(client)">
+                        <ion-label>
+                            <h2>{{client.firstName}} {{client.lastName}}</h2>
+                            <p>Product Name: {{client.productName}}</p>
+                             <p>Cart ID: {{client.cartId}</p> 
+                        </ion-label>
+                    </ion-item>
+                </div>
+            </ion-list>-->
+		</ion-scroll>
+
+		<form id="page4-form6" class="list availability-form">
+			<div class="item item-toggle toggle-large ic-selected" toggle-class="toggle-positive" id="page4-toggle6">
+				<div class="toggle-unavailable"><span>{{'ASSISTBOX_UNAVAILABLE' | translate}}</span></div>
+				<label class="toggle disable-user-behavior">
+					<input id="availability-checkbox" type="checkbox" ng-model="availabilityToggle"
+						ng-click="changeAvailability()">
+					<div class="track">
+						<div class="handle">
+						</div>
+					</div>
+				</label>
+				<div class="toggle-available"><span>{{'ASSISTBOX_AVAILABLE' | translate}}</span></div>
+			</div>
+		</form>
+		<!-- <img ng-if="isQueueSelected" src="img/start-call.png" ng-click="occupyClient()" style="position:fixed;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	font-size: 40px;
+	text-align: center;
+	z-index: 101;
+	bottom: 3%;
+	right: 3%;">-->
+	</ion-content>
+</ion-view>
